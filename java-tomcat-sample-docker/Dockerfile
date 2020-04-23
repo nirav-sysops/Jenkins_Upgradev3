@@ -1,4 +1,4 @@
 FROM tomcat:8.0
-RUN copy **/*.war 'C:\Program Files (x86)\Apache Software Foundation\Tomcat 8.5\webapps\'
+RUN cp -a **/*.war /usr/local/tomcat/webapps/
 EXPOSE 8080
-CMD ["catalina.bat", "run"]
+CMD ["catalina.sh", "run"]
