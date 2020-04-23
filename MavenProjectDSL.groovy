@@ -9,8 +9,5 @@ job('First-Maven-Project-Via-DSL') {
     steps {
         maven('clean package', 'maven-samples/single-module/pom.xml')
     }
-    publishers {
-        //archive the war file generated
-        archiveArtifacts '**/*.jar'
-    }
+    
 }
